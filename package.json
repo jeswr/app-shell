@@ -27,18 +27,6 @@
   "engines": {
     "node": ">=20.12"
   },
-  "scripts": {
-    "build": "tsc -p tsconfig.build.json && node scripts/copy-css.mjs",
-    "lint": "biome check src test scripts && npm run check:lockfile-transport",
-    "lint:fix": "biome check --write src test scripts",
-    "typecheck": "tsc --noEmit",
-    "test": "vitest run",
-    "check:dist": "node scripts/check-dist.mjs",
-    "check:lockfile-transport": "node scripts/check-lockfile-transport.mjs",
-    "api:report": "api-extractor run --local",
-    "api:check": "api-extractor run",
-    "prepublishOnly": "npm run build"
-  },
   "peerDependencies": {
     "react": ">=18",
     "react-dom": ">=18"
@@ -47,22 +35,5 @@
     "@radix-ui/react-avatar": "^1.1.10",
     "@radix-ui/react-dropdown-menu": "^2.1.16",
     "lucide-react": "^0.544.0"
-  },
-  "devDependencies": {
-    "@biomejs/biome": "^2.5.0",
-    "@microsoft/api-extractor": "7.58.9",
-    "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.3.0",
-    "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^22.0.0",
-    "@types/react": "^19.0.0",
-    "@types/react-dom": "^19.0.0",
-    "@vitejs/plugin-react": "^5.2.0",
-    "jsdom": "^26.0.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "typescript": "^5.9.0",
-    "vitest": "^4.1.8"
   }
 }
